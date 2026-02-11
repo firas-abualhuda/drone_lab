@@ -9,7 +9,7 @@ from langchain.chains import LLMChain
 from langchain_google_genai import ChatGoogleGenerativeAI
 import os
 
-# First Load the needed model and move it to the CPU
+# First Load the needed model and move it to the GPU
 processor = TrOCRProcessor.from_pretrained("microsoft/trocr-large-handwritten")
 trocr_model = VisionEncoderDecoderModel.from_pretrained("microsoft/trocr-large-handwritten")
 device = "cuda" if torch.cuda.is_available() else "cpu"
